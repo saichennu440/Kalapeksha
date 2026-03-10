@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-cormorant: 'Cormorant Garamond', serif;
+    --font-inter: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Kalāpeksha brand colors from logo */
+    --background: 0 0% 99%;
+    --foreground: 251 59% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 251 59% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 251 59% 20%;
+
+    --primary: 251 59% 26%;       /* Deep indigo-purple from logo */
+    --primary-foreground: 0 0% 99%;
+
+    --secondary: 30 90% 55%;      /* Warm orange accent from logo */
+    --secondary-foreground: 0 0% 99%;
+
+    --muted: 250 20% 96%;
+    --muted-foreground: 251 30% 50%;
+
+    --accent: 30 90% 55%;
+    --accent-foreground: 0 0% 99%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 251 20% 88%;
+    --input: 251 20% 88%;
+    --ring: 251 59% 26%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-inter);
+  }
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: hsl(var(--background)); }
+::-webkit-scrollbar-thumb { background: hsl(var(--primary) / 0.3); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: hsl(var(--primary) / 0.6); }
+::selection { background: hsl(var(--secondary) / 0.2); color: hsl(var(--foreground)); }
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
