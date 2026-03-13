@@ -4,9 +4,9 @@ import { ArrowRight } from 'lucide-react';
 
 const artists = [
   {
-    name: 'Priya Menon',
+    name: 'Dr. Shilpa Kotla',
     artForm: 'Resin & Mixed Media',
-    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69b01a073f70d4aa265ff14f/ac935a2dd_generated_image.png',
+    image: '/shilpa.jpeg',
     alt: 'Portrait of female Indian artist holding her colorful handmade painting',
   },
   {

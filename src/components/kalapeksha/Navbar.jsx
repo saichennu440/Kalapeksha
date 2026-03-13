@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
-const LOGO = 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69b01a073f70d4aa265ff14f/380c1e57f_Kalapeksha_logo.png';
-
 const links = [
   { label: 'About', target: 'about' },
   { label: 'Programs', target: 'programs' },
@@ -15,6 +13,10 @@ const links = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const LOGO = scrolled
+  ? '/Kalapeksha_logo.png'
+  : '/Kalapeksha_logo_white.png';
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -53,7 +55,7 @@ export default function Navbar() {
               <button
                 key={link.target}
                 onClick={() => scrollTo(link.target)}
-                className="font-inter text-sm font-medium text-primary/70 hover:text-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary rounded px-1"
+                className={`font-inter text-sm font-medium ${scrolled ? 'text-primary/70' : 'text-white'} hover:text-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary rounded px-1`}
               >
                 {link.label}
               </button>
