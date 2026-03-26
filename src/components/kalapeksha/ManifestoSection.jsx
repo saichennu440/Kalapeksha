@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-const BG_IMG = 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69b01a073f70d4aa265ff14f/1799315bb_generated_image.png';
+const BG_IMG = '/3.jpeg';
 
 export default function ManifestoSection() {
   const ref = useRef(null);
@@ -12,8 +12,8 @@ export default function ManifestoSection() {
     <section ref={ref} className="relative py-36 px-6 overflow-hidden">
       {/* Background */}
       <motion.div className="absolute inset-0" style={{ scale }}>
-        <img src={BG_IMG} alt="" className="w-full h-full object-cover" aria-hidden="true" />
-        <div className="absolute inset-0 bg-primary/88" />
+        <img src={BG_IMG} alt="" className="w-full h-full object-cover" aria-hidden="true"  />
+        <div className="absolute inset-0  bg-gradient-to-r from-primary/90 via-primary/70 to-primary/30" />
       </motion.div>
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
