@@ -36,7 +36,7 @@ export default function FooterNew() {
             <p className="font-mono text-[10px] tracking-[0.4em] text-secondary uppercase mb-5">Connect</p>
             <div className="space-y-4">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/kalapeksha/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 font-inter text-sm text-white/60 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-secondary rounded"

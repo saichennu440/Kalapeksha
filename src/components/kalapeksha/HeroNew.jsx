@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const BG_IMG = '/1.jpeg';
+const BG_IMG = '/1.mp4';
 
 export default function HeroNew() {
   const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -10,11 +10,16 @@ export default function HeroNew() {
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <img
-          src={BG_IMG}
-          alt="Artisan at work"
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-full object-cover"
-        />
+        >
+          <source src={BG_IMG} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
       </div>
@@ -86,17 +91,22 @@ export default function HeroNew() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.4, duration: 1 }}
         >
-          <div className="relative">
+          {/* <div className="relative">
             <div className="w-80 h-80 rounded-full border border-white/10 absolute -top-8 -right-8" />
             <div className="w-64 h-64 rounded-full border border-secondary/20 absolute top-4 right-4" />
             <div className="relative w-72 h-72 rounded-full overflow-hidden border-2 border-white/20 mx-auto">
-              <img
-                src={BG_IMG}
-                alt="Artisan creating"
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
                 className="w-full h-full object-cover"
-              />
+              >
+                <source src={BG_IMG} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
-          </div>
+          </div> */}
         </motion.div>
       </div>
 
