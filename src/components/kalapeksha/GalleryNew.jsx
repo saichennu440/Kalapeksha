@@ -4,32 +4,32 @@ import { X } from 'lucide-react';
 
 const galleryImages = [
   {
-    src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69b01a073f70d4aa265ff14f/f62433e00_generated_image.png',
+    src: '/gallery/2.png',
     alt: 'Artisan workshop session with participants learning traditional craft techniques',
     label: 'Workshop',
   },
   {
-    src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69b01a073f70d4aa265ff14f/29721deeb_generated_image.png',
+    src: '/gallery/8.png',
     alt: 'Colorful traditional Indian textile artwork with intricate block print patterns',
     label: 'Artwork',
   },
   {
-    src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69b01a073f70d4aa265ff14f/f0f076343_generated_image.png',
+    src:'/gallery/4.png',
     alt: 'Indian folk art exhibition with colorful handmade artworks on display',
     label: 'Exhibition',
   },
   {
-    src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69b01a073f70d4aa265ff14f/a2dba523e_generated_image.png',
+    src: '/gallery/5.png',
     alt: 'Close up of artisan hands doing intricate embroidery with colorful threads',
     label: 'Artisan at Work',
   },
   {
-    src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69b01a073f70d4aa265ff14f/1799315bb_generated_image.png',
+    src: '/gallery/6.png',
     alt: 'Indian art fair event with colorful stalls and festive atmosphere',
     label: 'Art Fair',
   },
   {
-    src: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69b01a073f70d4aa265ff14f/c50295ccb_generated_image.png',
+    src: '/gallery/7.png',
     alt: 'Traditional Indian art workshop with group of artisans working together',
     label: 'Community',
   },
