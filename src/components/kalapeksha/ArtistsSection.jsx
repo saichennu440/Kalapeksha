@@ -9,18 +9,18 @@ const artists = [
     image: '/shilpa.jpeg',
     alt: 'Portrait of female Indian artist holding her colorful handmade painting',
   },
-  {
-    name: 'Arjun Sharma',
-    artForm: 'Wood Carving & Sculpture',
-    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69b01a073f70d4aa265ff14f/20c148d22_generated_image.png',
-    alt: 'Portrait of male Indian artisan holding traditional craft work',
-  },
-  {
-    name: 'Kamala Devi',
-    artForm: 'Handloom & Textile',
-    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69b01a073f70d4aa265ff14f/c180bfc16_generated_image.png',
-    alt: 'Portrait of senior Indian female artisan with traditional handloom textile',
-  },
+  // {
+  //   name: 'Arjun Sharma',
+  //   artForm: 'Wood Carving & Sculpture',
+  //   image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69b01a073f70d4aa265ff14f/20c148d22_generated_image.png',
+  //   alt: 'Portrait of male Indian artisan holding traditional craft work',
+  // },
+  // {
+  //   name: 'Kamala Devi',
+  //   artForm: 'Handloom & Textile',
+  //   image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69b01a073f70d4aa265ff14f/c180bfc16_generated_image.png',
+  //   alt: 'Portrait of senior Indian female artisan with traditional handloom textile',
+  // },
 ];
 
 export default function ArtistsSection() {
@@ -40,10 +40,10 @@ export default function ArtistsSection() {
               Featured <span className="italic">Artisans</span>
             </h2>
           </div>
-          <button className="inline-flex items-center gap-2 font-inter text-sm font-medium text-primary hover:text-secondary transition-colors group focus:outline-none focus:ring-2 focus:ring-primary rounded px-2 py-1">
+          {/* <button className="inline-flex items-center gap-2 font-inter text-sm font-medium text-primary hover:text-secondary transition-colors group focus:outline-none focus:ring-2 focus:ring-primary rounded px-2 py-1">
             View All Artisans
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </button>
+          </button> */}
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -29,7 +29,7 @@ const galleryImages = [
     label: 'Art Fair',
   },
   {
-    src: '/gallery/7.png',
+    src: '/gallery/3.png',
     alt: 'Traditional Indian art workshop with group of artisans working together',
     label: 'Community',
   },

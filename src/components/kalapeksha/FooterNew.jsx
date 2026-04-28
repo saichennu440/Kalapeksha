@@ -45,11 +45,11 @@ export default function FooterNew() {
                 @kalapeksha
               </a>
               <a
-                href="mailto:hello@kalapeksha.in"
+                href="mailto:kalapeksha@gmail.com"
                 className="flex items-center gap-3 font-inter text-sm text-white/60 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-secondary rounded"
               >
                 <Mail className="w-4 h-4 text-secondary" />
-                hello@kalapeksha.in
+                kalapeksha@gmail.com
               </a>
             </div>
 
