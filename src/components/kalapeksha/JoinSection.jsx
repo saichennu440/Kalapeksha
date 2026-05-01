@@ -1,14 +1,45 @@
+// @ts-nocheck
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, Loader2 } from 'lucide-react';
 
 export default function JoinSection() {
   const [form, setForm] = useState({ name: '', email: '', artForm: '', about: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError('');
+
+    try {
+      const res = await fetch('https://formspree.io/f/mbdwjwew', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          artForm: form.artForm,
+          about: form.about,
+        }),
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        const data = await res.json();
+        setError(data?.errors?.[0]?.message || 'Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      setError('Network error. Please check your connection and try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -85,7 +116,8 @@ export default function JoinSection() {
                   value={form[field.id]}
                   onChange={e => setForm({ ...form, [field.id]: e.target.value })}
                   required
-                  className="w-full px-4 py-3 bg-muted border border-border rounded-xl text-sm font-inter text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/40 transition"
+                  disabled={loading}
+                  className="w-full px-4 py-3 bg-muted border border-border rounded-xl text-sm font-inter text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/40 transition disabled:opacity-50"
                 />
               </div>
             ))}
@@ -100,14 +132,31 @@ export default function JoinSection() {
                 value={form.about}
                 onChange={e => setForm({ ...form, about: e.target.value })}
                 required
-                className="w-full px-4 py-3 bg-muted border border-border rounded-xl text-sm font-inter text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/40 transition resize-none"
+                disabled={loading}
+                className="w-full px-4 py-3 bg-muted border border-border rounded-xl text-sm font-inter text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/40 transition resize-none disabled:opacity-50"
               />
             </div>
+
+            {/* Error message */}
+            {error && (
+              <p className="text-sm text-red-500 font-inter bg-red-50 border border-red-100 rounded-lg px-4 py-3">
+                {error}
+              </p>
+            )}
+
             <button
               type="submit"
-              className="w-full bg-primary text-white font-inter font-semibold text-sm py-3.5 rounded-xl hover:bg-primary/90 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              disabled={loading}
+              className="w-full bg-primary text-white font-inter font-semibold text-sm py-3.5 rounded-xl hover:bg-primary/90 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
-              Register
+              {loading ? (
+                <>
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                  Sending...
+                </>
+              ) : (
+                'Register'
+              )}
             </button>
           </form>
         </motion.div>
