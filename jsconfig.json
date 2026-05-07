@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "https://kalapeksha.com",
     "paths": {
       "@/*": ["./src/*"]
     },

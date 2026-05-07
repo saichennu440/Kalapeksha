@@ -16,7 +16,7 @@ export default function Navbar() {
 
   const LOGO = scrolled
   ? '/Kalapeksha_logo.png'
-  : '/Kalapeksha_logo_white.png';
+  : '/Ka_White.png';
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);

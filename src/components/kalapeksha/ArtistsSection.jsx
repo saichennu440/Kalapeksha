@@ -9,12 +9,12 @@ const artists = [
     image: '/shilpa.jpeg',
     alt: 'Portrait of female Indian artist holding her colorful handmade painting',
   },
-  // {
-  //   name: 'Arjun Sharma',
-  //   artForm: 'Wood Carving & Sculpture',
-  //   image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69b01a073f70d4aa265ff14f/20c148d22_generated_image.png',
-  //   alt: 'Portrait of male Indian artisan holding traditional craft work',
-  // },
+  {
+    name: 'Srija',
+    artForm: 'Singer & Guitarist',
+    image: '/srija.jpeg',
+    alt: 'Portrait of male Indian artisan holding traditional craft work',
+  },
   // {
   //   name: 'Kamala Devi',
   //   artForm: 'Handloom & Textile',
